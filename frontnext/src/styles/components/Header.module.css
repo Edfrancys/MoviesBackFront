@@ -1,0 +1,59 @@
+.header{
+    background: var(--background);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.3rem 5rem;
+}
+.headerLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerLogo img {
+    width: 45px !important;
+    margin-right: 10px;
+}
+
+.headerLogo p {
+    margin-top: 4px;
+    font-size: 2.5rem;
+    color: var(--orange);
+    font-weight: 900;
+}
+
+.headerMenu a{
+    color: var(--orange);
+    font-weight: 600;
+}
+.headerMenu a:hover{
+    color: var(--white);
+    font-weight: normal;
+}
+
+.headerSearch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerSearch input{    
+    border: none;
+    height: 34px;
+    width: 230px;
+    padding: 0 16px;
+    border-radius: 20px 0 0 20px;
+}
+.headerSearch button{
+    background: var(--orange);
+    border: none;
+    height: 40px;
+    width: 50px;
+    border-radius: 0 20px 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

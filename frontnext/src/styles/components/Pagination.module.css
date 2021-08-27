@@ -1,0 +1,29 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+    column-gap: 7px;
+    margin-top: 2rem;
+}
+
+.pagination button {
+    width: 27px;
+    height: 27px;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: .3rem;
+}
+
+.active button {
+    background: none;
+    color: var(--blueDark);
+    font-weight: bold;
+    border: none;
+}
+
+.active button:focus{
+    outline: none;
+}

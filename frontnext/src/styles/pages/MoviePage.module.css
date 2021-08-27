@@ -1,0 +1,55 @@
+.contentMovie {
+    padding: 4rem 1rem;
+}
+
+.contentMovie h1 {
+    color: var(--blueDark);
+}
+
+.contentDetails {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 4fr 2fr;
+}
+
+.contentDetails h1 {
+    font-size: 1.8rem;
+}
+
+.contentDetails img {
+    width: 250px;
+}
+
+.contentDetails button {
+    margin-left: 10px;
+    border: none;
+    background-color: var(--blueDark);
+    color: var(--white);
+    border-radius: 7px;
+    padding: 1px 10px;
+}
+
+.contentDetails h2{
+    margin-top: 1.3rem;
+    font-size: 1.2rem;
+    color: var(--blueDark);
+}
+
+.contentDetails img {
+    border-radius: 17px;
+}
+
+.sinopse div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sinopse div span{
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 5px 8px 3px 8px;
+}
+.sinopse p {
+    margin-top: .3rem;
+    text-align: justify;
+}

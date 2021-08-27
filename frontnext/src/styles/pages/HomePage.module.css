@@ -1,0 +1,53 @@
+.contentFilm {
+    padding: 4rem 1rem;
+}
+
+.contentFilm h1 {
+    color: var(--blueDark);
+}
+
+.gridFilms {
+    margin-top: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 1.2rem;
+    row-gap: 1.3rem;
+}
+
+
+.itemMovies .voteMovie{
+    position: relative;
+    width: 0;
+    height: 0;
+    top: 1rem;
+    
+}
+
+.voteMovie span {
+    background: var(--voteMovieBG);
+    color: var(--white);
+    font-weight: 600;
+    padding: 3px 5px;
+}
+
+.itemMovies img {
+    width: 100%;
+    border-radius: 12px;
+}
+.itemMovies .movieDetails{
+    padding: 0.2rem 0.4rem;
+    display: flex;
+    flex-direction: column;    
+}
+
+.movieDetails .title{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 15px;
+    color: var(--blueDark);
+}
+.movieDetails .release{
+    font-size: .8rem;
+    color: var(--gray);
+}

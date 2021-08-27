@@ -1,0 +1,9 @@
+# next.js
+/frontnext/.next/
+/frontnext/out/
+
+# production
+/frontnext/build
+
+# dependencies
+/frontnext/node_modules

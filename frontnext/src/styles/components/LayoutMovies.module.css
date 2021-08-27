@@ -1,0 +1,20 @@
+.bodyMain{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blurMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.75) 150px, rgba(255, 255, 255, 0.85) 100%);
+
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blurMain .containerMain {
+    width: calc((100vw/12)*9);
+}
+

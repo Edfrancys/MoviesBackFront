@@ -1,0 +1,11 @@
+.bodyMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bodyMain .containerMain {
+    width: calc((100vw/12)*9);
+}
+
