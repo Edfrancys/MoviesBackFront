@@ -7,11 +7,22 @@ import Pagination from '../components/Pagination';
 
 import styles from '../styles/pages/HomePage.module.css'
 
+interface ListDetailsType {
+    total_results: number;
+    total_pages: number;
+}
+interface ListMoviesType {
+    id: number;
+    vote_average: number;
+    poster_path: string;
+    title: string;
+    release_date: string;
+}
 
 const HomePage = () => {
 
-    const [listMovies, setListMovies] = useState([])
-    const [listDetails, setListDetails] = useState({})
+    const [listMovies, setListMovies] = useState<ListMoviesType[]>([])
+    const [listDetails, setListDetails] = useState<ListDetailsType>({} as any)
     const [page, setPage] = useState(1)
     const [offset, setOffset] = useState(0);  
 
@@ -34,9 +45,9 @@ const HomePage = () => {
                 
                 <div className={styles.gridFilms}>
                     {listMovies.map((filme, key)=>(
-                        <Link href={'/movie/' + filme.id}>
+                        <Link href={'/movie/' + filme.id} key={key}>
                             <a>
-                                <div className={styles.itemMovies} key={key}>
+                                <div className={styles.itemMovies} >
                                 
                                     <div className={styles.voteMovie}>
                                         <span>{filme.vote_average}/10</span>
@@ -60,13 +71,5 @@ const HomePage = () => {
         </Layout>
     )
 }
-
-// HomePage.getInitialProps = async () => {
-//     const resp = await axios.get('http://app.localhost/api/filme/2') 
-       
-//     return {
-//         dados: resp.data
-//     }
-// }
 
 export default HomePage;

@@ -17,7 +17,7 @@ npm install
 Inicie o servidor do frontend
 
 ```bash
-npm run bild
+npm run build
 ```
 
 Acesse no navegador http://localhost:3000

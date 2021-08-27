@@ -8,10 +8,23 @@ import Layout from '../../../components/Layout';
 import Pagination from '../../../components/Pagination';
 import Link from 'next/link';
 
+interface MovieDetailsType {
+    total_results: number;
+    total_pages: number;
+}
+
+interface QueryResultsType {
+    id: number;
+    vote_average: number;
+    poster_path: string;
+    title: string;
+    release_date: string;
+}
+
 const Search = ({ query }) => {
 
-    const [movieDetails, setMovieDetails] = useState({})
-    const [queryResults, setQueryResults] = useState([])
+    const [movieDetails, setMovieDetails] = useState<MovieDetailsType>()
+    const [queryResults, setQueryResults] = useState<QueryResultsType[]>()
     const [page, setPage] = useState(1)
     const [offset, setOffset] = useState(0);    
 
@@ -38,9 +51,9 @@ const Search = ({ query }) => {
 
                 <div className={styles.gridFilms}>
                     {queryResults.map((filme, key) => (
-                            <Link href={'/movie/' + filme.id}>
+                            <Link href={'/movie/' + filme.id} key={key}>
                                 <a>
-                                    <div className={styles.itemMovies} key={key}>
+                                    <div className={styles.itemMovies} >
 
                                         <div className={styles.voteMovie}>
                                             <span>{filme.vote_average}/10</span>

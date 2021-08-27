@@ -6,9 +6,26 @@ import moment from 'moment';
 import styles from  '../../styles/pages/MoviePage.module.css'
 import LayoutMovies from '../../components/Layout/Movies';
 
+interface MovieDetailsType {
+    id: number;
+    backdrop_path: string;
+    vote_average: number;
+    poster_path: string;
+    title: string;
+    release_date: string;
+    runtime: number;
+    overview: string;
+    genres: [GenresType];
+}
+
+interface GenresType {
+    id: number;
+    name: string;
+}
+
 const Movie = ({id}) => {
     
-    const [movieDetails, setMovieDetails] = useState({})    
+    const [movieDetails, setMovieDetails] = useState<MovieDetailsType>()    
 
     useEffect(()=>{        
         
@@ -32,7 +49,7 @@ const Movie = ({id}) => {
                         {
                             movieDetails.genres ?
                             movieDetails.genres.map((value, key) => (
-                                <button key>{value.name}</button>
+                                <button key={key}>{value.name}</button>
                             ))
                             : ''
                         }

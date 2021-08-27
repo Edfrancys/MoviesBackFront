@@ -18,8 +18,8 @@ const Pagination = ({ limit, total, totalPages, offset, setOffset, setPage}) => 
         <ul className={styles.pagination}>
             {Array.from({ length: MAX_ITEMS })
                 .map((_,key) => key + first )
-                .map((page) => (
-                    <li className={ page === current ? styles.active : null }>
+                .map((page, key) => (
+                    <li key={key} className={ page === current ? styles.active : null }>
                         <button
                             onClick={() => {
                                 setOffset((page -1 ) * limit)
